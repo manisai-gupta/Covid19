@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+h1.pagetitle {
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    background-color: whitesmoke;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px
+}
+
+.col-4 {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px
+}
+
+.col-8 {
+    -ms-flex: 0 0 66.666667%;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px
+}
+
+.table-responsive-sm {
+    display: block;
+    position: relative;
+    min-width: 80vw;
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: scroll;
+}
+
+.tableField td {
+    padding: 10px;
+}
+
+.map,
+.container {
+    width: 80vw;
+}
+
+.map {
+    max-height: 600px;
+    padding-bottom: 10px;
+    overflow-y: hidden;
+}

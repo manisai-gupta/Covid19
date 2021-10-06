@@ -1,0 +1,39 @@
+{% extends "base.html" %} {% block headContent %} {% endblock headContent %} {% block bodycontent %}
+
+<div class="container">
+    <h1 class="pagetitle"><img src="{{ url_for('static',filename='image.png')}}" type="image/png" width="25px" height="25px" style="position: relative;"> COVID-19 Mapping</h1>
+    <div class="row">
+
+        <div class="col-4">
+            <table class="table-responsive-sm">
+                <tr class="tableField">
+                    <th>Country</th>
+                    {% for pair in pairs %}
+                    <td>{{ pair[0]}}</td>
+                    {% endfor %}
+                </tr>
+
+                <tr class="tableField">
+                    <th>Confirmed</th>
+                    {% for pair in pairs %}
+                    <td>{{ pair[1]}}</td>
+                    {% endfor %}
+                </tr>
+
+                <tr class="tableField">
+                    <th>Deaths</th>
+                    {% for pair in pairs %}
+                    <td>{{ pair[2]}}</td>
+                    {% endfor %}
+                </tr>
+
+            </table>
+        </div>
+        <div class="col-8">
+            <div class="map">{{html_map|safe}}</div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
